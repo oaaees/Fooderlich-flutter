@@ -7,7 +7,7 @@ class Card2 extends StatelessWidget {
 
   final String authorName = 'Johan Paredes';
   final String title = 'Smoothie Connoisseur';
-  final String imgLocation = 'assets/author_katz.jpeg';
+  final String imgLocation = 'assets/author_johan.jpg';
 
   @override 
   Widget build(BuildContext context){
