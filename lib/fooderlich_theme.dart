@@ -2,75 +2,69 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FooderlichTheme {
-  // 1
   static TextTheme lightTextTheme = TextTheme(
-    bodyLarge: GoogleFonts.roboto(
+    bodyText1: GoogleFonts.openSans(
       fontSize: 14.0,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
-    displayLarge: GoogleFonts.roboto(
+    headline1: GoogleFonts.openSans(
       fontSize: 32.0,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.bold,
       color: Colors.black,
     ),
-    displayMedium: GoogleFonts.roboto(
+    headline2: GoogleFonts.openSans(
       fontSize: 21.0,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
-    displaySmall: GoogleFonts.roboto(
+    headline3: GoogleFonts.openSans(
       fontSize: 16.0,
-      fontWeight: FontWeight.w100,
+      fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
-    titleLarge: GoogleFonts.roboto(
+    headline6: GoogleFonts.openSans(
       fontSize: 20.0,
-      fontWeight: FontWeight.w100,
+      fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
   );
 
-  // 2
   static TextTheme darkTextTheme = TextTheme(
-    bodyLarge: GoogleFonts.roboto(
+    bodyText1: GoogleFonts.openSans(
       fontSize: 14.0,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
-    displayLarge: GoogleFonts.roboto(
+    headline1: GoogleFonts.openSans(
       fontSize: 32.0,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
-    displayMedium: GoogleFonts.roboto(
+    headline2: GoogleFonts.openSans(
       fontSize: 21.0,
-      fontWeight: FontWeight.w300,
+      fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
-    displaySmall: GoogleFonts.roboto(
+    headline3: GoogleFonts.openSans(
       fontSize: 16.0,
-      fontWeight: FontWeight.w100,
+      fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
-    titleLarge: GoogleFonts.roboto(
+    headline6: GoogleFonts.openSans(
       fontSize: 20.0,
-      fontWeight: FontWeight.w100,
+      fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
   );
 
-  // 3
   static ThemeData light() {
     return ThemeData(
-      useMaterial3: true,
       brightness: Brightness.light,
       checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateColor.resolveWith(
-          (states) {
-            return Colors.black;
-          },
-        ),
+        fillColor: MaterialStateColor.resolveWith((states) {
+          return Colors.black;
+        }),
       ),
       appBarTheme: const AppBarTheme(
         foregroundColor: Colors.black,
@@ -87,10 +81,8 @@ class FooderlichTheme {
     );
   }
 
-  // 4
   static ThemeData dark() {
     return ThemeData(
-      useMaterial3: true,
       brightness: Brightness.dark,
       appBarTheme: AppBarTheme(
         foregroundColor: Colors.white,
