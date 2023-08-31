@@ -1,16 +1,23 @@
-# fooderlich
+# Fooderlich
 
-A new Flutter project.
+This repository contains the files for a Flutter app that I am creating following the steps of the Flutter Apprentice book by Michael Katz, Kevin David Moore & Vincent Ngo.
+
+The app is a simple recipes app, it is still in development
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started, clone this repository to your local machine.
 
-A few resources to get you started if this is your first Flutter project:
+```
+git clone https://github.com/oaaees/Fooderlich-flutter.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+Then, open the project in your favorite IDE.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Running the App
+
+To run the app, simply run the following command in your terminal:
+
+```
+flutter run
+```
