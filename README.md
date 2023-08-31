@@ -10,7 +10,6 @@ To get started, clone this repository to your local machine.
 
 ```
 git clone https://github.com/oaaees/Fooderlich-flutter.git
-
 ```
 Then, open the project in your favorite IDE.
 

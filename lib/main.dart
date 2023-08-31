@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'fooderlich_theme.dart';
@@ -11,8 +13,11 @@ class Fooderlich extends StatelessWidget {
   const Fooderlich({super.key});
   @override
   Widget build(BuildContext context) {
-    final theme = FooderlichTheme.light();
+    final theme = FooderlichTheme.dark();
     return MaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith( 
+        dragDevices: {PointerDeviceKind.mouse}
+      ),
       theme: theme,
       title: 'Fooderlich',
       home: const Home(),
