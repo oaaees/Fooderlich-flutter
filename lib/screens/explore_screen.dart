@@ -4,9 +4,31 @@ import '../components/components.dart';
 import '../models/models.dart';
 import '../api/mock_fooderlich_service.dart';
 
-class ExploreScreen extends StatelessWidget {
+class ExploreScreen extends StatefulWidget {
+
+  const ExploreScreen({super.key});
+
+  @override
+  State<ExploreScreen> createState() => _ExploreScreenState();
+}
+
+class _ExploreScreenState extends State<ExploreScreen> {
   final mockService = MockFooderlichService();
-  ExploreScreen({super.key});
+  late final ScrollController _controller;
+
+  @override
+  void initState() {
+    _controller = ScrollController();
+    _controller.addListener(() { 
+      if(_controller.offset == _controller.position.minScrollExtent){
+        print('I am at the top');
+      } else if (_controller.offset == _controller.position.maxScrollExtent){
+        print('I am at the bottom');
+      } 
+    });
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context){
@@ -15,12 +37,14 @@ class ExploreScreen extends StatelessWidget {
       builder: (context, AsyncSnapshot<ExploreData> snapshot){
         if(snapshot.connectionState == ConnectionState.done){
           final recipes = snapshot.data?.todayRecipes ?? [];
+          final posts = snapshot.data?.friendPosts ?? [];
           return ListView(
+            controller: _controller,
             scrollDirection: Axis.vertical,
             children: [
-              TodayRecipeListView(recipes: snapshot.data?.todayRecipes ?? []),
+              TodayRecipeListView(recipes: recipes),
               const SizedBox(height: 16),
-              FriendPostListView(friendPosts: snapshot.data?.friendPosts ?? []),
+              FriendPostListView(friendPosts: posts),
             ],
           );
         } else {
@@ -30,5 +54,11 @@ class ExploreScreen extends StatelessWidget {
         }
       }
     );
+  }
+
+  @override
+  void dispose() {
+    _controller.removeListener(() { print('removed'); });
+    super.dispose();
   }
 }
