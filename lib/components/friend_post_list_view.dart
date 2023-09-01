@@ -6,7 +6,7 @@ import '../models/models.dart';
 class FriendPostListView extends StatelessWidget {
   final List<Post> friendPosts;
 
-  FriendPostListView({
+  const FriendPostListView({
     super.key,
     required this.friendPosts
   });
