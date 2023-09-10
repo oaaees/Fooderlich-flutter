@@ -16,7 +16,7 @@ class Fooderlich extends StatelessWidget {
     final theme = FooderlichTheme.dark();
     return MaterialApp(
       scrollBehavior: const MaterialScrollBehavior().copyWith( 
-        dragDevices: {PointerDeviceKind.mouse}
+        dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch}
       ),
       theme: theme,
       title: 'Fooderlich',
