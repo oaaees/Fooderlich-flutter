@@ -24,7 +24,7 @@ class RecipesGridView extends StatelessWidget {
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           //To make it one column, you can increase this number 
           //until its bigger than the screen
-          maxCrossAxisExtent: 200,
+          maxCrossAxisExtent: 400,
         ), 
         itemBuilder: (context, index) {
           final recipe = recipes[index];
